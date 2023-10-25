@@ -1,0 +1,58 @@
+HTML --------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div class="tabela">
+        <div class="linha cabecalho">
+            <div class="celula">Cabeçalho 1</div>
+            <div class="celula">Cabeçalho 2</div>
+        </div>
+        <div class="linha">
+            <div class="celula">Dado 1</div>
+            <div class="celula">Dado 2</div>
+        </div>
+        <div class="linha">
+            <div class="celula">Dado 3</div>
+            <div class="celula">Dado 4</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+CSS ----------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <div class="tabela">
+        <div class="linha cabecalho">
+            <div class="celula">Cabeçalho 1</div>
+            <div class="celula">Cabeçalho 2</div>
+        </div>
+        <div class="linha">
+            <div class="celula">Dado 1</div>
+            <div class="celula">Dado 2</div>
+        </div>
+        <div class="linha">
+            <div class="celula">Dado 3</div>
+            <div class="celula">Dado 4</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
