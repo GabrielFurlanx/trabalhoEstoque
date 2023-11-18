@@ -1,67 +1,73 @@
 body {
-    font-family: sans-serif;
-    background-color: #ffffff;
-  }
-
-body {
-    background-image: url('fundo-tela-de-cadastro.jpg');
-    background-size: cover;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  background-image: url('Image/fundo-tela-de-cadastro.jpg');
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
-  
-  #product-login-form {
-    width: 500px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-  
-  select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    width: 100%;
-    background-color: #000000;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+
+#product-login-form {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(240, 240, 240, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333333;
+}
