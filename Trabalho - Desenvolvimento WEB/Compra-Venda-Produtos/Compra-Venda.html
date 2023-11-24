@@ -3,112 +3,112 @@
 <head>
     <link type="text/css" rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
-    <div class="titulo">Controle e Estoque da Hambúrgueria QDelicia</div>
-    <div class="tabela">
-        <div class="linha cabecalho">
-            <div class="celula">Cabeçalho 1</div>
-            <div class="celula">Cabeçalho 2</div>
-            <div class="celula">Cabeçalho 3</div>
-            <div class="celula">Cabeçalho 4</div>
+<body style="background-image: url('/Projeto Ionic/Trabalho - Desenvolvimento WEB/fundo-esporte.jpg')">
+    <div id="titulo" style="height: 40px;">Compra de produtos</div>
+    <div id="tabela"> 
+        <div id="linha-cabecalho">
+            <div id="celula" style="text-align: center;">Produto</div>
+            <div id="celula" style="text-align: center;">Quantidade</div>
+            <div id="celula" style="text-align: center;">Preço</div>
+            <div id="celula" style="text-align: center;">Ação</div>
+    </div>
+    <div id="linha">
+        <div id="celula">Camiseta da marca Nike</div>
+        <div id="celula"><span id="quantidade-1">55</span></div>
+        <div id="celula">160</div>
+        <div id="celulabotao" style="padding-left: 90px;">
+            <button id="botao-oval" class="excluir" data-produto-id="1">Devolver</button>
+            <button id="botao-oval" class="adicionar" data-produto-id="1">Adicionar</button>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celulabotao">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+    </div>
+            <div id="linha">
+                <div id="celula">Tênis da marca Adidas</div>
+                <div id="celula"><span id="quantidade-2">62</span></div>
+                <div id="celula">220</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="2">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="2">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">2
-            </div>
+            <div id="linha">
+                <div id="celula">Pares de meia da marca puma</div>
+                <div id="celula"><span id="quantidade-3">30</span></div>
+                <div id="celula">50</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="3">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="3">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Halter de 5kg</div>
+                <div id="celula"><span id="quantidade-4">10</span></div>
+                <div id="celula">70</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="4">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="4">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Bola de futebol</div>
+                <div id="celula"><span id="quantidade-5">23</span></div>
+                <div id="celula">100</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="5">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="5">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Bola de basquete da marca Wilson</div>
+                <div id="celula"><span id="quantidade-6">20</span></div>
+                <div id="celula">120</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="6">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="6">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Pares de luva de boxe</div>
+                <div id="celula"><span id="quantidade-7">12</span></div>
+                <div id="celula">150</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="7">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="7">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Chuteira da marca Umbro</div>
+                <div id="celula"><span id="quantidade-8">16</span></div>
+                <div id="celula">170</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="8">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="8">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
-            </div>
+            <div id="linha">
+                <div id="celula">Tênis da marca fila</div>
+                <div id="celula"><span id="quantidade-9">34</span></div>
+                <div id="celula">300</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="9">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="9">Adicionar</button>
+                </div>
         </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>   
-            </div>
-        </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">   
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button></button>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="celula">Dado 1</div>
-            <div class="celula">Dado 2</div>
-            <div class="celula">Dado 3</div>
-            <div class="celula">
-                <button class="botao-oval excluir">Excluir</button>
-                <button class="botao-oval adicionar">Adicionar</button>
+            <div id="linha">
+                <div id="celula">Creatina</div>
+                <div id="celula"><span id="quantidade-10">8</span></div>
+                <div id="celula">230</div>
+                <div id="celulabotao" style="padding-left: 90px;";>
+                    <button id="botao-oval" class="excluir" data-produto-id="10">Devolver</button>
+                    <button id="botao-oval" class="adicionar" data-produto-id="10">Adicionar</button>
             </div>
         </div>
     </div>
+    
+    <div id="resultado" style="height: 40px;">Resultado: <span id="valorResultado">0</span></div>
+
+    <button>Clique aqui</button>
+
+    <script src="javascript/javascript.js"></script>
+
 </body>
 </html>

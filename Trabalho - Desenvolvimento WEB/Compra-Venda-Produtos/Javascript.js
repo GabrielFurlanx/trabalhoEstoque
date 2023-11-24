@@ -4,39 +4,117 @@ const adicionarBotoes = document.querySelectorAll(".adicionar");
 const excluirBotoes = document.querySelectorAll(".excluir");
 
 // Função para adicionar um produto
-function adicionarProduto(produtoId, linhaId) {
-    const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
-    let quantidade = parseInt(quantidadeElement.textContent);
+function adicionarProduto(produtoId) {
+  // Obter o valor do produto
+  const valor = getValorProduto(produtoId);
 
-    // Verifica se há produtos disponíveis para adicionar
-    if (quantidade > 0) {
-        quantidade--; // Diminui a quantidade na tabela
-        quantidadeElement.textContent = quantidade;
-        atualizarResultado();
+  // Obter a quantidade do produto
+  const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
+  let quantidade = parseInt(quantidadeElement.textContent);
 
-        // Altera a quantidade na linha selecionada
-        const quantidadeLinhaElement = document.getElementById(`quantidade-linha-${linhaId}`);
-        quantidadeLinhaElement.textContent = quantidade;
+  // Verifica se há produtos disponíveis para adicionar
+  if (quantidade > 0) {
+    quantidade--; // Diminui a quantidade na tabela
+    quantidadeElement.textContent = quantidade;
+    atualizarResultado(valor);
 
-        // Verifica se a quantidade é menor que zero
-        if (quantidade < 0) {
-            quantidade = 0; // Define a quantidade como zero
-            quantidadeElement.textContent = quantidade;
-            quantidadeLinhaElement.textContent = quantidade;
-        }
+    // Altera a quantidade na linha selecionada
+    const quantidadeLinhaElement = document.getElementById(`quantidade-linha-${produtoId}`);
+    quantidadeLinhaElement.textContent = quantidade;
+
+    // Verifica se a quantidade é menor que zero
+    if (quantidade < 0) {
+      quantidade = 0; // Define a quantidade como zero
+      quantidadeElement.textContent = quantidade;
+      quantidadeLinhaElement.textContent = quantidade;
     }
+  }
 }
 
 // Função para excluir um produto
 function excluirProduto(produtoId) {
+  const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
+  let quantidade = parseInt(quantidadeElement.textContent);
+
+  if (quantidade < 55) { // Aqui você deve ajustar a lógica de acordo com suas necessidades para cada produto
+    quantidade++; // Aumenta a quantidade na tabela
+    quantidadeElement.textContent = quantidade;
+    atualizarResultado(-getValorProduto(produtoId)); // Subtrai o valor do produto removido
+  }
+  // Aqui você pode adicionar condições para outros produtos se necessário
+
+}
+
+// Função para obter o valor do produto
+function getValorProduto(produtoId) {
+  switch (produtoId) {
+    case "1":
+      return 160;
+    case "2":
+      return 220;
+    case "3":
+      return 50;
+    case "4":
+      return 70;
+    case "5":
+      return 100;
+    case "6":
+      return 120;
+    case "7":
+      return 150;
+    case "8":
+      return 170;
+    case "9":
+      return 300;
+    case "10":
+      return 230;
+    default:
+      return 0;
+  }
+}
+
+// Função para atualizar o resultado
+function atualizarResultado(valor) {
+  // Obter o valor atual do resultado
+  const valorAtual = parseFloat(valorResultado.textContent);
+
+  // Atualizar o valor do resultado
+  const valorTotal = valorAtual + valor;
+
+  // Atualizar o valor do resultado
+  valorResultado.textContent = valorTotal.toFixed(2);
+}
+
+// Adicionar event listeners aos botões "Adicionar"
+adicionarBotoes.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const produtoId = botao.getAttribute("data-produto-id");
+    adicionarProduto(produtoId);
+  });
+});
+
+// Adicionar event listeners aos botões "Excluir"
+excluirBotoes.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const produtoId = botao.getAttribute("data-produto-id");
+    excluirProduto(produtoId);
+  });
+});
+
+
+
+
+// Função para Devolver um produto
+function excluirProduto(produtoId) {
     if (produtoId == 1) {
     const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
     let quantidade = parseInt(quantidadeElement.textContent);
+    
 
     if (quantidade < 55) {
-        quantidade++; // Diminui a quantidade na tabela
+        quantidade++; // Aumenta a quantidade na tabela
         quantidadeElement.textContent = quantidade;
-
+        
         // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
         let totalAtual = parseInt(document.getElementById("valorResultado").textContent);
         const preco = parseInt(document.getElementById(`celula-preco-${produtoId}`).textContent);
@@ -51,9 +129,9 @@ function excluirProduto(produtoId) {
     } else if (produtoId == 2) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 62) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumenta a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -70,9 +148,9 @@ function excluirProduto(produtoId) {
         } else if (produtoId == 3) {
             const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
             let quantidade = parseInt(quantidadeElement.textContent);
-        
+            
             if (quantidade < 30) {
-                quantidade++; // Diminui a quantidade na tabela
+                quantidade++; // Aumenta a quantidade na tabela
                 quantidadeElement.textContent = quantidade;
         
                 // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -89,9 +167,9 @@ function excluirProduto(produtoId) {
     }  else if (produtoId == 4) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 10) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumenta a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -108,9 +186,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 5) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 23) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -127,9 +205,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 6) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 20) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -146,9 +224,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 7) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 12) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -165,9 +243,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 8) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 16) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -184,9 +262,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 9) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 34) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -203,9 +281,9 @@ function excluirProduto(produtoId) {
     } if (produtoId == 10) {
         const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
         let quantidade = parseInt(quantidadeElement.textContent);
-    
+        
         if (quantidade < 8) {
-            quantidade++; // Diminui a quantidade na tabela
+            quantidade++; // Aumentar a quantidade na tabela
             quantidadeElement.textContent = quantidade;
     
             // Verifica se o valor total atual mais o valor do item ultrapassa o valor limite
@@ -218,38 +296,10 @@ function excluirProduto(produtoId) {
     
             // Atualiza o resultado
             atualizarResultado();
+
             }
     }
 }
 
+  
 
-
-// Função para atualizar o resultado total
-function atualizarResultado() {
-    let total = 0;
-    adicionarBotoes.forEach((botao) => {
-        const produtoId = botao.getAttribute("data-produto-id");
-        const quantidade = parseInt(document.getElementById(`quantidade-${produtoId}`).textContent);
-        const preco = parseInt(document.getElementById(`celula-preco-${produtoId}`).textContent);
-        total += quantidade * preco;
-    });
-    valorResultado.textContent = total;
-}
-
-// Adicionar event listeners aos botões "Adicionar" e "Excluir"
-adicionarBotoes.forEach((botao) => {
-    botao.addEventListener("click", () => {
-        const produtoId = botao.getAttribute("data-produto-id");
-        adicionarProduto(produtoId);
-    });
-});
-
-excluirBotoes.forEach((botao) => {
-    botao.addEventListener("click", () => {
-        const produtoId = botao.getAttribute("data-produto-id");
-        excluirProduto(produtoId);
-    });
-});
-
-// Chamar a função inicial para calcular o resultado
-atualizarResultado();
