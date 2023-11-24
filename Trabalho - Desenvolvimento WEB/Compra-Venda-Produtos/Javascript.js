@@ -45,6 +45,55 @@ function excluirProduto(produtoId) {
 
 }
 
+// ... (código anterior)
+
+// Função para excluir um produto
+function excluirProduto(produtoId) {
+  const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
+  let quantidade = parseInt(quantidadeElement.textContent);
+
+  if (quantidade < 55) { // Aqui você deve ajustar a lógica de acordo com suas necessidades para cada produto
+    quantidade++; // Aumenta a quantidade na tabela
+    quantidadeElement.textContent = quantidade;
+    atualizarResultado(-getValorProduto(produtoId)); // Subtrai o valor do produto removido
+  }
+  // Aqui você pode adicionar condições para outros produtos se necessário
+}
+
+// Função para devolver um produto
+function devolverProduto(produtoId) {
+  const quantidadeElement = document.getElementById(`quantidade-${produtoId}`);
+  let quantidade = parseInt(quantidadeElement.textContent);
+
+  if (quantidade < 55) { // Aqui você deve ajustar a lógica de acordo com suas necessidades para cada produto
+    quantidade++; // Aumenta a quantidade na tabela
+    quantidadeElement.textContent = quantidade;
+    atualizarResultado(-getValorProduto(produtoId)); // Subtrai o valor do produto devolvido
+  }
+  // Aqui você pode adicionar condições para outros produtos se necessário
+}
+
+// ... (restante do código)
+
+// Adicionar event listeners aos botões "Excluir"
+excluirBotoes.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const produtoId = botao.getAttribute("data-produto-id");
+    excluirProduto(produtoId);
+  });
+});
+
+// Adicionar event listeners aos botões "Devolver"
+excluirBotoes.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const produtoId = botao.getAttribute("data-produto-id");
+    devolverProduto(produtoId);
+  });
+});
+
+// ... (restante do código)
+
+
 // Função para obter o valor do produto
 function getValorProduto(produtoId) {
   switch (produtoId) {
@@ -299,7 +348,5 @@ function excluirProduto(produtoId) {
 
             }
     }
+    
 }
-
-  
-
