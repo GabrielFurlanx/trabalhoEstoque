@@ -9,7 +9,7 @@
   <div id="product-login-form">
     <div class="container">
       <h1>Cadastrar produto</h1>
-      <form action="submit.php" method="post">
+      <form action="../Compra-Venda-Produtos/Compra-Venda.html" method="post" onsubmit="return validarFormulario()">
         <div class="form-group">
           <label for="nome">Nome do Produto</label>
           <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do produto">
@@ -22,10 +22,34 @@
           <label for="quantidade">Quantidade</label>
           <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade">
         </div>
-        <button id="cadastrarBtn">Cadastrar</button>
+        <button type="submit" id="cadastrarBtn">Cadastrar</button>
       </form>
     </div>
   </div>
-  <script src="Cadastrar_produto.js"></script>
+  <script>
+    function validarFormulario() {
+      const nome = document.getElementById("nome").value.trim();
+      const preco = parseFloat(document.getElementById("preco").value);
+      const quantidade = parseInt(document.getElementById("quantidade").value);
+
+      if (nome === "") {
+        alert("O nome do produto deve ser preenchido");
+        return false;
+      }
+
+      if (isNaN(preco) || preco <= 0) {
+        alert("O preço do produto deve ser um número maior que zero");
+        return false;
+      }
+
+      if (isNaN(quantidade) || quantidade <= 0) {
+        alert("A quantidade do produto deve ser um número maior que zero");
+        return false;
+      }
+
+      // Se todos os campos estiverem corretos, o formulário será submetido
+      return true;
+    }
+  </script>
 </body>
 </html>
