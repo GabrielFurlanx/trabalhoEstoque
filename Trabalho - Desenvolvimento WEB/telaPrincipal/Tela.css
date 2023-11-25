@@ -1,0 +1,68 @@
+/* Adicionando estilos para o contêiner dos botões */
+/* Estilos para o contêiner e botões */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 5vh;
+    background-color: #c5c5c5; /* Alterando para cor cinza */
+}
+
+#main-container {
+    width: 300px; /* Reduzindo a largura do contêiner */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco quase transparente */
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Botões um em cima do outro */
+    align-items: center; /* Alinhamento central dos botões */
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Largura total */
+}
+
+button:hover {
+    background-color: #E60084;
+    color: #FFF;
+}
+
+.login-btn {
+    background-color: #E60084;
+    color: #FFF;
+}
+
+.register-btn {
+    background-color: #E60084;
+    color: #FFF;
+}
+
+
+body {
+    padding-top: 5vh;
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-position-y: -150px;
+}
