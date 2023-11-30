@@ -23,9 +23,13 @@
           <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade">
         </div>
         <button type="submit" id="cadastrarBtn">Cadastrar</button>
+
+        <!-- Adicionando o botão de cancelar -->
+        <button type="button" onclick="cancelarCadastro()">Cancelar</button>
       </form>
     </div>
   </div>
+
   <script>
     function validarFormulario() {
       const nome = document.getElementById("nome").value.trim();
@@ -49,6 +53,11 @@
 
       // Se todos os campos estiverem corretos, o formulário será submetido
       return true;
+    }
+
+    // Função para cancelar o cadastro (redireciona para index.html)
+    function cancelarCadastro() {
+      window.location.href = "../Compra-Venda-Produtos/Compra-Venda.html";
     }
   </script>
 </body>

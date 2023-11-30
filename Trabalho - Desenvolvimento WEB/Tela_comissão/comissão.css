@@ -1,0 +1,73 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    color: #4caf50;
+}
+
+form {
+    display: inline-block;
+    text-align: center; /* Centraliza o formulário */
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%; /* Reduzi a largura do input para evitar que ocupe toda a largura da tela */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Adicionei um estilo ao botão "Voltar à Página Inicial" para torná-lo mais destacado */
+button#backButton {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button#backButton:hover {
+    background-color: #2980b9;
+}
