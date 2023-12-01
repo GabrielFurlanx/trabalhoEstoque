@@ -1,23 +1,38 @@
-function validarFormulario() {
-  const nome = document.getElementById("nome").value.trim();
-  const preco = parseFloat(document.getElementById("preco").value);
-  const quantidade = parseInt(document.getElementById("quantidade").value);
+function cadastrarProduto() {
+    // Capturando os valores do formulário
+    const nome = document.getElementById('nome').value;
+    const preco = parseFloat(document.getElementById('preco').value);
+    const quantidade = parseInt(document.getElementById('quantidade').value);
 
-  if (nome === "") {
-      alert("O nome do produto deve ser preenchido");
-      return false;
-  }
+    // Criando um objeto com os dados do produto
+    const novoProduto = {
+        nome: nome,
+        preco: preco,
+        quantidade: quantidade
+    };
 
-  if (isNaN(preco) || preco <= 0) {
-      alert("O preço do produto deve ser um número maior que zero");
-      return false;
-  }
+    // Verificando se já existem produtos armazenados
+    let produtos = [];
+    const produtosArmazenados = localStorage.getItem('produtos');
 
-  if (isNaN(quantidade) || quantidade <= 0) {
-      alert("A quantidade do produto deve ser um número maior que zero");
-      return false;
-  }
+    if (produtosArmazenados) {
+        produtos = JSON.parse(produtosArmazenados);
+    }
 
-  // Se todos os campos estiverem corretos, retorna true
-  return true;
+    // Adicionando o novo produto ao array
+    produtos.push(novoProduto);
+
+    // Armazenando a lista atualizada no localStorage
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+
+    // Limpar os campos do formulário após o cadastro
+    document.getElementById('nome').value = '';
+    document.getElementById('preco').value = '';
+    document.getElementById('quantidade').value = '';
+
+    return false; // Retorna false para evitar o envio do formulário
+}
+
+function cancelarCadastro() {
+    window.location.href = '../Compra-Venda-Produtos/Compra-Venda.html';
 }

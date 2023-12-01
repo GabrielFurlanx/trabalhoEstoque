@@ -1,118 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="estilo.css">
+    <title>Tabela de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
-<body style="background-image: url('/Projeto Ionic/Trabalho - Desenvolvimento WEB/fundo-esporte.jpg')">
-    <div id="titulo" style="height: 40px;">Compra de produtos</div>
-    <div id="tabela"> 
-        <div id="linha-cabecalho">
-            <div id="celula" style="text-align: center;">Produto</div>
-            <div id="celula" style="text-align: center;">Quantidade</div>
-            <div id="celula" style="text-align: center;">Preço</div>
-            <div id="celula" style="text-align: center;">Ação</div>
-    </div>
-    <div id="linha">
-        <div id="celula">Camiseta da marca Nike</div>
-        <div id="celula"><span id="quantidade-1">55</span></div>
-        <div id="celula">160</div>
-        <div id="celulabotao" style="padding-left: 90px;">
-            <button id="botao-oval" class="excluir" data-produto-id="1">Devolver</button>
-            <button id="botao-oval" class="adicionar" data-produto-id="1">Adicionar</button>
-        </div>
-    </div>
-            <div id="linha">
-                <div id="celula">Tênis da marca Adidas</div>
-                <div id="celula"><span id="quantidade-2">62</span></div>
-                <div id="celula">220</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="2">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="2">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Pares de meia da marca puma</div>
-                <div id="celula"><span id="quantidade-3">30</span></div>
-                <div id="celula">50</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="3">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="3">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Halter de 5kg</div>
-                <div id="celula"><span id="quantidade-4">10</span></div>
-                <div id="celula">70</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="4">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="4">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Bola de futebol</div>
-                <div id="celula"><span id="quantidade-5">23</span></div>
-                <div id="celula">100</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="5">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="5">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Bola de basquete da marca Wilson</div>
-                <div id="celula"><span id="quantidade-6">20</span></div>
-                <div id="celula">120</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="6">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="6">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Pares de luva de boxe</div>
-                <div id="celula"><span id="quantidade-7">12</span></div>
-                <div id="celula">150</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="7">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="7">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Chuteira da marca Umbro</div>
-                <div id="celula"><span id="quantidade-8">16</span></div>
-                <div id="celula">170</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="8">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="8">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Tênis da marca fila</div>
-                <div id="celula"><span id="quantidade-9">34</span></div>
-                <div id="celula">300</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="9">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="9">Adicionar</button>
-                </div>
-        </div>
-            <div id="linha">
-                <div id="celula">Creatina</div>
-                <div id="celula"><span id="quantidade-10">8</span></div>
-                <div id="celula">230</div>
-                <div id="celulabotao" style="padding-left: 90px;";>
-                    <button id="botao-oval" class="excluir" data-produto-id="10">Devolver</button>
-                    <button id="botao-oval" class="adicionar" data-produto-id="10">Adicionar</button>
-            </div>
-        </div>
-    </div>
-    
-    <div id="resultado" style="height: 40px;">resultado: <span id="valorResultado">0</span></div>
-    <a href="../Cadastrar Produtos/Cadastrar_Produto.html">
-        <button id="botao-cadastro">Cadastrar Produto</button>
-    </a>
-    <a href="../Tela_Principal/Principal.html">
-        <button id="botao-inicial">Tela Inicial</button>
-    </a>
+<body>
 
-    <script src="javascript/javascript.js"></script>
+<h2>Lista de Produtos</h2>
+
+<table id="tabelaProdutos">
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+    </tr>
+</table>
+<div class="navigation-buttons">
+    <button onclick="window.location.href='../Tela_Principal/Principal.html'">Página Principal</button>
+    <button onclick="window.location.href='../Cadastrar Produtos/Cadastrar_Produto.html'">Cadastrar Produto</button>
+</div>
+
+<script src="Javascript.js"></script>
 
 </body>
 </html>

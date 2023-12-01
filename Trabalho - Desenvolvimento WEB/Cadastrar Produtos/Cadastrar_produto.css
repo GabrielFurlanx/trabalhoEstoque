@@ -57,7 +57,7 @@ textarea {
 
 button {
   width: 100%;
-  background-color: #000000;
+  background-color: #E60084;
   color: #ffffff;
   font-weight: bold;
   padding: 12px;
@@ -69,5 +69,5 @@ button {
 }
 
 button:hover {
-  background-color: #333333;
+  background-color: #E60084;
 }

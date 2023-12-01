@@ -7,7 +7,7 @@ body {
 }
 
 h2 {
-    color: #4caf50;
+    color: #E60084;
 }
 
 form {
@@ -37,7 +37,7 @@ input {
 button {
     padding: 12px;
     font-size: 16px;
-    background-color: #4caf50;
+    background-color: #E60084;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #E60084;
 }
 
 #result {
@@ -60,7 +60,7 @@ button#backButton {
     margin-top: 20px;
     padding: 12px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color: #E60084;
     color: #fff;
     cursor: pointer;
     border: none;
@@ -69,5 +69,5 @@ button#backButton {
 }
 
 button#backButton:hover {
-    background-color: #2980b9;
+    background-color: #E60084;
 }
