@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Comissão</title>
+    <link rel="stylesheet" href="comissão.css">
+</head>
+<body>
+    <h2>Calculadora de Comissão</h2>
+
+    <form id="commissionForm">
+        <label for="salesAmount">Valor Total das Vendas:</label>
+        <input type="number" id="salesAmount" name="salesAmount" required>
+        <br>
+
+        <label for="salary">Salário Base do Funcionário:</label>
+        <input type="number" id="salary" name="salary" required>
+        <br>
+
+        <button type="button" onclick="calculateCommission()">Calcular Comissão</button>
+    </form>
+
+    <div id="result"></div>
+
+    <button id="backButton" onclick="goToHomePage()">Voltar à Página Inicial</button>
+
+    <script>
+        function calculateCommission() {
+            var salesAmount = parseFloat(document.getElementById('salesAmount').value);
+            var salary = parseFloat(document.getElementById('salary').value);
+            var commissionRate = 0.07; // 7%
+
+            if (!isNaN(salesAmount) && !isNaN(salary)) {
+                var commission = salesAmount * commissionRate;
+                var newSalary = salary + commission;
+
+                document.getElementById('result').innerHTML = "<p>A comissão é: $" + commission.toFixed(2) + "</p>" +
+                                                                "<p>O novo salário corrigido é: $" + newSalary.toFixed(2) + "</p>";
+            } else {
+                document.getElementById('result').innerHTML = "<p>Por favor, insira valores válidos para as vendas e o salário base.</p>";
+            }
+        }
+
+        function goToHomePage() {
+            window.location.href = "../Tela_Principal/Principal.html";
+        }
+    </script>
+</body>
+</html>
