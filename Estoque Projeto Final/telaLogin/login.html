@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login SportySpire</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-container">
+    <h1>Login</h1>
+    <form id="login-form">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="off">
+      <label for="password">Senha</label>
+      <input type="password" name="password" id="password" placeholder="Digite sua senha">
+      <input type="submit" value="Login">
+    </form>
+    <div id="social-container">
+      <p>Ou entre pelas suas redes sociais</p>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-linkedin"></i>
+    </div>
+    <div id="register-container">
+      <p>Ainda não tem uma conta?</p>
+      <a href="#">Registrar</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const url = '/login';
+
+      try {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email, password })
+  });
+
+  if (response.ok) {
+    const data = await response.json();
+    alert(data.message);
+    window.location.href = 'http://localhost:8080/Tela_Principal/Principal.html';
+  } else {
+    const responseData = await response.json();
+    console.error('Erro na resposta:', responseData); // Adicione este log para capturar mais detalhes
+    alert(responseData.error || 'Erro ao fazer login');
+  }
+} catch (error) {
+  console.error('Erro na requisição:', error);
+  alert('Erro ao fazer login. Verifique sua conexão ou tente novamente mais tarde.');
+}
+
+    });
+  </script>
+</body>
+</html>
